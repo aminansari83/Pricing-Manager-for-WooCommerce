@@ -1,0 +1,2237 @@
+# Copyright (C) 2026 Amin Ansari
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pricing Manager for WooCommerce 0.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/andiya-price-guard\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-06T14:04:29+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: andiya-price-guard\n"
+
+#. Plugin Name of the plugin
+#: andiya-price-guard.php
+msgid "Pricing Manager for WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+#: andiya-price-guard.php
+msgid "مدیریت فارسی اعتبار قیمت، تغییر گروهی قیمت و استعلام در ووکامرس."
+msgstr ""
+
+#. Author of the plugin
+#: andiya-price-guard.php
+msgid "Amin Ansari"
+msgstr ""
+
+#. Author URI of the plugin
+#: andiya-price-guard.php
+msgid "https://aminansari.ir"
+msgstr ""
+
+#: admin-page.php:8
+#: includes/class-admin.php:87
+msgid "مدیریت قیمت ووکامرس"
+msgstr ""
+
+#: admin-page.php:8
+msgid "فروش کالاهای دارای قیمت معتبر؛ استعلام برای کالاهای نیازمند بررسی."
+msgstr ""
+
+#: admin-page.php:8
+msgid "نسخه آزمایشی"
+msgstr ""
+
+#: admin-page.php:10
+msgid "بخش‌های مدیریت قیمت"
+msgstr ""
+
+#: admin-page.php:10
+msgid "میز کار"
+msgstr ""
+
+#: admin-page.php:14
+msgid "قیمت‌ها"
+msgstr ""
+
+#: admin-page.php:14
+#: admin-page.php:61
+#: assets/admin.js:59
+msgid "گروه‌های قیمت‌گذاری"
+msgstr ""
+
+#: admin-page.php:14
+msgid "منابع اطلاعات"
+msgstr ""
+
+#: admin-page.php:18
+#: includes/class-privacy.php:52
+msgid "استعلام‌ها"
+msgstr ""
+
+#: admin-page.php:22
+msgid "تاریخچه"
+msgstr ""
+
+#: admin-page.php:26
+msgid "تنظیمات"
+msgstr ""
+
+#: admin-page.php:27
+msgid "از کجا شروع کنم؟"
+msgstr ""
+
+#: admin-page.php:27
+msgid "برای تغییر قیمت از «قیمت‌ها» شروع کنید. انتخاب‌های پرتکرار را در «گروه‌های قیمت‌گذاری» ذخیره کنید. گروه، ترکیب فیلترهای کالاهاست و دسته‌بندی فروشگاه را تغییر نمی‌دهد. برای مدیریت شرایط بحرانی، دامنه و حالت فروش را در تنظیمات انتخاب کنید."
+msgstr ""
+
+#: admin-page.php:27
+msgid "استعلام، سفارش پرداخت‌شده نیست. مشتری پس از دریافت پیشنهاد معتبر، اطلاعات ارسال و پرداخت را در مسیر اصلی ووکامرس تکمیل می‌کند."
+msgstr ""
+
+#: admin-page.php:27
+msgid "عملیات اخیر و کارهای ناتمام"
+msgstr ""
+
+#: admin-page.php:27
+msgid "گزارش را باز کنید؛ ادامه پردازش از همان عملیات انجام می‌شود و درصد دوباره روی قیمت اضافه نمی‌شود."
+msgstr ""
+
+#: admin-page.php:27
+msgid "سلامت فروشگاه و محدودیت‌های نسخه"
+msgstr ""
+
+#: admin-page.php:27
+msgid "این نسخه کالاهای ساده و متغیر را مدیریت می‌کند. درگاه، قالب اختصاصی، ترب، چندارزی، باندل، اشتراک و بازار چندفروشنده به آزمون اتصال جدا نیاز دارند."
+msgstr ""
+
+#: admin-page.php:29
+msgid "تغییر گروهی قیمت"
+msgstr ""
+
+#: admin-page.php:29
+msgid "۱. انتخاب کالا و روش"
+msgstr ""
+
+#: admin-page.php:29
+msgid "۲. پیش‌نمایش و استثناها"
+msgstr ""
+
+#: admin-page.php:29
+msgid "۳. تأیید نهایی و اجرا"
+msgstr ""
+
+#: admin-page.php:30
+msgid "گروه قیمت‌گذاری ذخیره‌شده"
+msgstr ""
+
+#: admin-page.php:30
+msgid "انتخاب دستی"
+msgstr ""
+
+#: admin-page.php:30
+#: admin-page.php:67
+msgid "دسته‌بندی‌ها"
+msgstr ""
+
+#: admin-page.php:30
+msgid "بدون انتخاب = تمام دسته‌ها؛ زیر‌دسته‌ها هم شامل می‌شوند."
+msgstr ""
+
+#: admin-page.php:30
+msgid "جست‌وجو در نام محصول"
+msgstr ""
+
+#: admin-page.php:30
+msgid "پیشنهاد زنده با دو حرف؛ انتخاب نام، فیلتر تمام محصولات منطبق است."
+msgstr ""
+
+#: admin-page.php:30
+msgid "منبع محصول"
+msgstr ""
+
+#: admin-page.php:30
+msgid "مثلاً source:1 یا نام تأمین‌کننده"
+msgstr ""
+
+#: admin-page.php:31
+msgid "روش تغییر"
+msgstr ""
+
+#: admin-page.php:31
+msgid "درصد افزایش یا کاهش"
+msgstr ""
+
+#: admin-page.php:31
+msgid "مبلغ افزایش یا کاهش"
+msgstr ""
+
+#: admin-page.php:31
+msgid "قیمت ثابت"
+msgstr ""
+
+#: admin-page.php:31
+#: assets/admin-workbench.js:59
+msgid "تغییر وضعیت فروش"
+msgstr ""
+
+#: admin-page.php:31
+#: assets/admin-workbench.js:59
+msgid "تأیید قیمت فعلی"
+msgstr ""
+
+#: admin-page.php:31
+msgid "مقدار"
+msgstr ""
+
+#: admin-page.php:31
+msgid "برای کاهش درصد یا مبلغ، عدد منفی وارد کنید."
+msgstr ""
+
+#: admin-page.php:31
+msgid "وضعیت جدید"
+msgstr ""
+
+#: admin-page.php:31
+#: admin-page.php:85
+#: includes/class-admin.php:786
+#: assets/admin.js:110
+msgid "پیروی از تنظیمات"
+msgstr ""
+
+#: admin-page.php:31
+#: admin-page.php:85
+#: includes/class-admin.php:787
+msgid "خرید با قیمت معتبر"
+msgstr ""
+
+#: admin-page.php:31
+#: admin-page.php:85
+#: includes/class-admin.php:788
+#: assets/admin.js:12
+msgid "استعلام"
+msgstr ""
+
+#: admin-page.php:31
+#: admin-page.php:85
+#: includes/class-admin.php:789
+msgid "توقف فروش"
+msgstr ""
+
+#: admin-page.php:31
+msgid "مدت اعتبار قیمت (ساعت)"
+msgstr ""
+
+#: admin-page.php:31
+msgid "صفر = بدون انقضای زمانی؛ حالت اضطراری همچنان اعمال می‌شود."
+msgstr ""
+
+#: admin-page.php:32
+msgid "گردکردن، تخفیف و مبنای محاسبه"
+msgstr ""
+
+#: admin-page.php:32
+msgid "مضرب گردکردن"
+msgstr ""
+
+#: admin-page.php:32
+msgid "روش گردکردن"
+msgstr ""
+
+#: admin-page.php:32
+msgid "رو به بالا"
+msgstr ""
+
+#: admin-page.php:32
+msgid "رو به پایین"
+msgstr ""
+
+#: admin-page.php:32
+msgid "نزدیک‌ترین مقدار"
+msgstr ""
+
+#: admin-page.php:32
+msgid "کالاهای دارای قیمت ویژه"
+msgstr ""
+
+#: admin-page.php:32
+msgid "کنار گذاشته شوند"
+msgstr ""
+
+#: admin-page.php:32
+msgid "هر دو قیمت تغییر کنند"
+msgstr ""
+
+#: admin-page.php:32
+msgid "نسبت تخفیف حفظ شود"
+msgstr ""
+
+#: admin-page.php:32
+msgid "قیمت ویژه حذف شود"
+msgstr ""
+
+#: admin-page.php:32
+msgid "مبنا"
+msgstr ""
+
+#: admin-page.php:32
+msgid "قیمت فعلی (عملیات یک‌باره)"
+msgstr ""
+
+#: admin-page.php:32
+msgid "اصلاح عملیات قبلی، از مبنای اولیه محاسبه می‌شود؛ درصدها روی هم جمع نمی‌شوند."
+msgstr ""
+
+#: admin-page.php:32
+msgid "این بار کالاهای مستثنا هم بررسی شوند"
+msgstr ""
+
+#: admin-page.php:33
+msgid "نمایش پیش‌نمایش"
+msgstr ""
+
+#: admin-page.php:34
+msgid "پیش‌نمایش و نتیجه عملیات"
+msgstr ""
+
+#: admin-page.php:36
+msgid "پیشرفت پردازش عملیات"
+msgstr ""
+
+#: admin-page.php:37
+msgid "انتخاب کالاهای آماده این صفحه"
+msgstr ""
+
+#: admin-page.php:37
+msgid "کنارگذاشتن کالاهای این صفحه"
+msgstr ""
+
+#: admin-page.php:39
+msgid "انتخاب"
+msgstr ""
+
+#: admin-page.php:39
+#: assets/admin.js:136
+msgid "کالا / SKU"
+msgstr ""
+
+#: admin-page.php:39
+#: assets/admin.js:162
+msgid "قبل از عملیات"
+msgstr ""
+
+#: admin-page.php:39
+#: assets/admin.js:162
+msgid "محاسبه‌شده"
+msgstr ""
+
+#: admin-page.php:39
+msgid "تغییر قیمت عادی"
+msgstr ""
+
+#: admin-page.php:39
+msgid "وضعیت / دلیل"
+msgstr ""
+
+#: admin-page.php:41
+#: admin-page.php:59
+#: admin-page.php:80
+#: admin-page.php:84
+msgid "قبلی"
+msgstr ""
+
+#: admin-page.php:41
+#: admin-page.php:59
+#: admin-page.php:80
+#: admin-page.php:84
+msgid "بعدی"
+msgstr ""
+
+#: admin-page.php:43
+msgid "بررسی و تأیید نهایی"
+msgstr ""
+
+#: admin-page.php:44
+msgid "ادامه عملیات ناتمام"
+msgstr ""
+
+#: admin-page.php:45
+msgid "تازه‌سازی گزارش"
+msgstr ""
+
+#: admin-page.php:46
+#: assets/admin.js:163
+msgid "دریافت گزارش CSV"
+msgstr ""
+
+#: admin-page.php:47
+msgid "توقف پردازش آینده"
+msgstr ""
+
+#: admin-page.php:48
+msgid "بازگردانی همین عملیات"
+msgstr ""
+
+#: admin-page.php:49
+msgid "اصلاح از مبنای اولیه"
+msgstr ""
+
+#: admin-page.php:52
+msgid "تأیید نهایی پیش از تغییر کالاها"
+msgstr ""
+
+#: admin-page.php:53
+msgid "کالاهای انتخاب‌شده، مبلغ‌ها و امکان تأمین را بررسی کرده‌ام."
+msgstr ""
+
+#: admin-page.php:54
+msgid "تأیید و شروع تغییرات"
+msgstr ""
+
+#: admin-page.php:54
+msgid "بازگشت به پیش‌نمایش"
+msgstr ""
+
+#: admin-page.php:56
+msgid "قیمت محاسبه‌شده برای ردیف کنارگذاشته، ناموفق یا دارای تعارض، به معنی اعمال‌شدن نیست. گزارش CSV وضعیت هر ردیف را دارد؛ برای ورود قیمت از فایل نمونه بخش منابع استفاده کنید."
+msgstr ""
+
+#: admin-page.php:57
+msgid "بازگردانی، تغییر دستی جدید را حفظ می‌کند. توقف پردازش فقط ادامه کار را قطع می‌کند و تغییرهای انجام‌شده را برنمی‌گرداند."
+msgstr ""
+
+#: admin-page.php:59
+msgid "بررسی یک کالا یا تنوع"
+msgstr ""
+
+#: admin-page.php:59
+msgid "نام یا SKU"
+msgstr ""
+
+#: admin-page.php:59
+msgid "جست‌وجو"
+msgstr ""
+
+#: admin-page.php:62
+msgid "دسته‌بندی، ساختار فروشگاه برای مشتری است. گروه قیمت‌گذاری یک انتخاب ذخیره‌شده برای کارهای مدیریتی است؛ مثلاً دسته «ساعت زنانه» همراه برند «سیکو». ساخت گروه اختیاری است."
+msgstr ""
+
+#: admin-page.php:63
+msgid "گزینه‌های داخل یک فیلتر با «یا» و فیلترهای مختلف با «و» ترکیب می‌شوند. ساخت یا حذف گروه، دسته‌بندی و قیمت محصولات را تغییر نمی‌دهد."
+msgstr ""
+
+#: admin-page.php:64
+msgid "تازه‌سازی فهرست گروه‌ها"
+msgstr ""
+
+#: admin-page.php:65
+#: assets/admin.js:71
+msgid "ساخت گروه قیمت‌گذاری"
+msgstr ""
+
+#: admin-page.php:67
+msgid "نام قابل تشخیص گروه"
+msgstr ""
+
+#: admin-page.php:67
+msgid "مثلاً سیکو زنانه وارداتی"
+msgstr ""
+
+#: admin-page.php:67
+msgid "زیر‌دسته‌ها هم شامل می‌شوند؛ بدون انتخاب یعنی همه دسته‌ها."
+msgstr ""
+
+#: admin-page.php:67
+msgid "جست‌وجو در نام کالا"
+msgstr ""
+
+#: admin-page.php:67
+msgid "پیشنهاد زنده با دو حرف؛ تمام محصولات منطبق با این عبارت در گروه قرار می‌گیرند."
+msgstr ""
+
+#: admin-page.php:67
+msgid "منبع کالا"
+msgstr ""
+
+#: admin-page.php:69
+#: assets/admin.js:71
+msgid "ذخیره گروه قیمت‌گذاری"
+msgstr ""
+
+#: admin-page.php:69
+msgid "ساخت گروه جدید"
+msgstr ""
+
+#: admin-page.php:71
+msgid "ورود فایل قیمت"
+msgstr ""
+
+#: admin-page.php:71
+msgid "SKU دقیق کالا یا تنوع، واحد پول و نام ستون‌ها را مشخص کنید. موجودی از این فایل تغییر نمی‌کند. کدهای دارای صفر اول را در اکسل به صورت متن ذخیره کنید."
+msgstr ""
+
+#: admin-page.php:71
+msgid "فایل CSV یا XLSX"
+msgstr ""
+
+#: admin-page.php:71
+msgid "واحد پول فایل"
+msgstr ""
+
+#: admin-page.php:71
+msgid "ستون شناسه کالا"
+msgstr ""
+
+#: admin-page.php:71
+msgid "ستون قیمت عادی"
+msgstr ""
+
+#: admin-page.php:71
+msgid "ستون قیمت ویژه"
+msgstr ""
+
+#: admin-page.php:71
+#: admin-page.php:85
+msgid "اعتبار (ساعت)"
+msgstr ""
+
+#: admin-page.php:71
+msgid "بررسی فایل و پیش‌نمایش"
+msgstr ""
+
+#: admin-page.php:71
+msgid "حداکثر ۵ مگابایت؛ XLSX بدون فرمول، ماکرو و لینک خارجی. قیمت خالی نادیده گرفته می‌شود؛ قیمت صفر یا منفی رد می‌شود."
+msgstr ""
+
+#: admin-page.php:71
+msgid "دانلود فایل نمونه"
+msgstr ""
+
+#: admin-page.php:72
+msgid "منبع JSON تأمین‌کننده"
+msgstr ""
+
+#: admin-page.php:72
+msgid "خودکارسازی به منبع واقعی نیاز دارد. ابتدا دریافت دستی، پیش‌نمایش و تخصیص کالاها به منبع را انجام دهید؛ سپس زمان‌بندی را فعال کنید."
+msgstr ""
+
+#: admin-page.php:72
+msgid "نام منبع"
+msgstr ""
+
+#: admin-page.php:72
+msgid "نشانی عمومی HTTPS"
+msgstr ""
+
+#: admin-page.php:72
+msgid "واحد پول"
+msgstr ""
+
+#: admin-page.php:72
+msgid "فاصله دریافت و اعتبار (ساعت)"
+msgstr ""
+
+#: admin-page.php:72
+msgid "حد تغییر خودکار مجاز (%)"
+msgstr ""
+
+#: admin-page.php:72
+msgid "دریافت زمان‌بندی‌شده برای کالاهای متصل به همین منبع"
+msgstr ""
+
+#: admin-page.php:72
+msgid "اتصال این فروشگاه به نشانی بالا را تأیید می‌کنم."
+msgstr ""
+
+#: admin-page.php:72
+msgid "ذخیره منبع"
+msgstr ""
+
+#: admin-page.php:72
+msgid "منبع جدید"
+msgstr ""
+
+#: admin-page.php:72
+msgid "قالب داده و اتصال امن"
+msgstr ""
+
+#: admin-page.php:72
+msgid "زمان داده باید تازه باشد. جهش خارج از آستانه، قیمت قبلی را نگه می‌دارد و کالا را استعلامی می‌کند. کلید خصوصی در پایگاه داده ذخیره نمی‌شود؛ در wp-config.php از APG_SOURCE_TOKEN_شماره‌منبع استفاده کنید. اتصال ERP و پیامک، رابط توسعه بعدی است."
+msgstr ""
+
+#: admin-page.php:73
+msgid "کنترل فروش در شرایط نوسان"
+msgstr ""
+
+#: admin-page.php:73
+msgid "حالت فروش"
+msgstr ""
+
+#: admin-page.php:73
+msgid "عادی، با کنترل اعتبار هر کالا"
+msgstr ""
+
+#: admin-page.php:73
+msgid "حالت اضطراری: استعلام"
+msgstr ""
+
+#: admin-page.php:73
+msgid "توقف فروش و استعلام جدید"
+msgstr ""
+
+#: admin-page.php:73
+msgid "دامنه کنترل"
+msgstr ""
+
+#: admin-page.php:73
+msgid "بدون انتخاب = تمام فروشگاه؛ زیر‌دسته‌ها هم شامل‌اند."
+msgstr ""
+
+#: admin-page.php:73
+msgid "اعتبار پیش‌فرض قیمت (ساعت)"
+msgstr ""
+
+#: admin-page.php:73
+msgid "با عدد مثبت، کالاهای تأییدنشده نیز استعلامی می‌شوند."
+msgstr ""
+
+#: admin-page.php:73
+msgid "اعتبار پیش‌فرض پیشنهاد (ساعت)"
+msgstr ""
+
+#: admin-page.php:73
+msgid "حالت استعلام، پیشنهادهای معتبر صادرشده را لغو نمی‌کند. حالت توقف، پذیرش پیشنهاد جدید را هم می‌بندد. سفارش پرداخت‌شده و تلاش پرداخت شروع‌شده با مبلغ ثبت‌شده ادامه می‌یابد."
+msgstr ""
+
+#: admin-page.php:74
+msgid "هنگام غیرفعال‌سازی افزونه"
+msgstr ""
+
+#: admin-page.php:74
+msgid "بازگرداندن تغییرهای افزونه به مقدار قبلی (پیش‌فرض)"
+msgstr ""
+
+#: admin-page.php:74
+msgid "نگه‌داشتن قیمت‌های فعلی"
+msgstr ""
+
+#: admin-page.php:74
+msgid "ویرایش دستی جدید، موجودی واقعی، سفارش‌ها و درخواست‌ها حفظ می‌شوند. کنترل نمایش افزونه حذف و حالت اضطراری بازنشانی می‌شود. افزونه‌های کش یا CDN باید محتوای فروشگاه را دوباره تازه کنند."
+msgstr ""
+
+#: admin-page.php:74
+msgid "تکمیل بازگردانی باقی‌مانده از غیرفعال‌سازی قبلی"
+msgstr ""
+
+#: admin-page.php:75
+msgid "پیام‌ها، ایمیل و حریم خصوصی"
+msgstr ""
+
+#: admin-page.php:75
+msgid "متن دکمه استعلام"
+msgstr ""
+
+#: admin-page.php:75
+msgid "پیام استعلام"
+msgstr ""
+
+#: admin-page.php:75
+msgid "پیام توقف"
+msgstr ""
+
+#: admin-page.php:75
+msgid "نگهداری درخواست‌های بسته (روز)"
+msgstr ""
+
+#: admin-page.php:75
+msgid "ایمیل درخواست جدید به ایمیل مدیریت وردپرس"
+msgstr ""
+
+#: admin-page.php:75
+msgid "ایمیل پیگیری و پیشنهاد به مشتری دارای ایمیل"
+msgstr ""
+
+#: admin-page.php:75
+msgid "هنگام حذف کامل افزونه، اطلاعات اختصاصی آن پاک شود"
+msgstr ""
+
+#: admin-page.php:75
+msgid "اطلاعات به آندیا ارسال نمی‌شود. درخواست‌های باز تا رسیدگی نگهداری می‌شوند. برای درخواست‌های بدون ایمیل، پس از احراز هویت مشتری از دکمه حذف اطلاعات شخصی در استعلام استفاده کنید."
+msgstr ""
+
+#: admin-page.php:75
+msgid "بررسی تغییرات تنظیمات"
+msgstr ""
+
+#: admin-page.php:75
+msgid "تأیید نهایی تنظیمات"
+msgstr ""
+
+#: admin-page.php:75
+msgid "تأیید و ذخیره تنظیمات"
+msgstr ""
+
+#: admin-page.php:80
+msgid "درخواست‌های استعلام"
+msgstr ""
+
+#: admin-page.php:80
+#: admin-page.php:84
+msgid "تازه‌سازی"
+msgstr ""
+
+#: admin-page.php:84
+msgid "عملیات و رویدادها"
+msgstr ""
+
+#: admin-page.php:85
+#: includes/class-policy.php:464
+msgid "بستن"
+msgstr ""
+
+#: admin-page.php:85
+msgid "قیمت عادی"
+msgstr ""
+
+#: admin-page.php:85
+msgid "قیمت ویژه"
+msgstr ""
+
+#: admin-page.php:85
+#: assets/admin.js:63
+#: assets/admin.js:147
+#: assets/admin.js:156
+#: assets/admin.js:162
+#: assets/admin.js:166
+msgid "وضعیت"
+msgstr ""
+
+#: admin-page.php:85
+#: assets/admin.js:151
+msgid "منبع"
+msgstr ""
+
+#: admin-page.php:85
+#: includes/class-admin.php:797
+msgid "استثنا از تغییر گروهی و خودکار"
+msgstr ""
+
+#: admin-page.php:85
+msgid "قیمت و امکان تأمین را بررسی کرده‌ام"
+msgstr ""
+
+#: admin-page.php:85
+msgid "ذخیره تغییرات"
+msgstr ""
+
+#: andiya-price-guard.php:44
+msgid "برای استفاده از «مدیریت قیمت ووکامرس»، ووکامرس را فعال کنید."
+msgstr ""
+
+#: includes/class-admin.php:27
+#: includes/class-admin.php:37
+#: assets/admin-workbench.js:16
+#: assets/admin.js:53
+msgid "تومان"
+msgstr ""
+
+#: includes/class-admin.php:28
+#: includes/class-admin.php:38
+#: assets/admin-workbench.js:16
+#: assets/admin.js:53
+msgid "هزار ریال"
+msgstr ""
+
+#: includes/class-admin.php:29
+#: includes/class-admin.php:39
+#: assets/admin-workbench.js:16
+#: assets/admin.js:53
+msgid "هزار تومان"
+msgstr ""
+
+#: includes/class-admin.php:49
+msgid "مدیریت قیمت"
+msgstr ""
+
+#: includes/class-admin.php:58
+msgid "قیمت و استعلام"
+msgstr ""
+
+#: includes/class-admin.php:74
+msgid "بازگردانی قبلی کامل نشده است. از تنظیمات مدیریت قیمت، بازگردانی باقی‌مانده را اجرا کنید."
+msgstr ""
+
+#: includes/class-admin.php:321
+msgid "عبارت جست‌وجو بیش از حد طولانی است."
+msgstr ""
+
+#: includes/class-admin.php:382
+msgid "محصول پیدا نشد."
+msgstr ""
+
+#: includes/class-admin.php:389
+msgid "محصول در حال تغییر است."
+msgstr ""
+
+#: includes/class-admin.php:395
+msgid "محصول تغییر کرده است. دوباره باز کنید."
+msgstr ""
+
+#: includes/class-admin.php:512
+msgid "گروه در حال ویرایش است. کمی بعد دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-admin.php:518
+msgid "گروه پیدا نشد. فهرست را تازه کنید."
+msgstr ""
+
+#: includes/class-admin.php:521
+msgid "گروه پس از بازشدن تغییر کرده است. فهرست را تازه و دوباره گروه را برای ویرایش باز کنید."
+msgstr ""
+
+#: includes/class-admin.php:530
+msgid "نام گروه باید بین ۱ تا ۱۸۰ نویسه باشد."
+msgstr ""
+
+#: includes/class-admin.php:541
+msgid "ذخیره تغییر گروه انجام نشد. دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-admin.php:628
+msgid "استعلام پیدا نشد."
+msgstr ""
+
+#: includes/class-admin.php:640
+msgid "استعلام در حال تغییر است."
+msgstr ""
+
+#: includes/class-admin.php:645
+msgid "وضعیت قابل تغییر نیست."
+msgstr ""
+
+#: includes/class-admin.php:702
+msgid "اجازه بارگذاری فایل ندارید."
+msgstr ""
+
+#: includes/class-admin.php:708
+msgid "یک فایل CSV یا XLSX سالم انتخاب کنید."
+msgstr ""
+
+#: includes/class-admin.php:784
+msgid "وضعیت فروش"
+msgstr ""
+
+#: includes/class-admin.php:802
+msgid "برای قیمت و اعتبار مستقل هر تنوع، از پنل قیمت و استعلام استفاده کنید. ویرایش دستی قیمت کالای متصل به منبع، آن را از به‌روزرسانی خودکار مستثنا و نیازمند تأیید می‌کند."
+msgstr ""
+
+#: includes/class-admin.php:836
+msgid "اجازه دسترسی به این پنل ندارید."
+msgstr ""
+
+#: includes/class-operations.php:117
+#: includes/class-operations.php:130
+msgid "روش محاسبه معتبر نیست."
+msgstr ""
+
+#: includes/class-operations.php:136
+msgid "روش گردکردن معتبر نیست."
+msgstr ""
+
+#: includes/class-operations.php:144
+msgid "عملیات معتبر نیست."
+msgstr ""
+
+#: includes/class-operations.php:168
+msgid "ثبت پیش‌نمایش انجام نشد."
+msgstr ""
+
+#: includes/class-operations.php:175
+msgid "دامنه را به گروه‌های کوچک‌تر از بیست هزار کالا تقسیم کنید."
+msgstr ""
+
+#: includes/class-operations.php:187
+msgid "این نوع محصول پشتیبانی نمی‌شود."
+msgstr ""
+
+#: includes/class-operations.php:189
+#: includes/class-operations.php:418
+msgid "محصول از تغییرات گروهی مستثنا شده است."
+msgstr ""
+
+#: includes/class-operations.php:191
+msgid "قیمت ویژه؛ طبق انتخاب شما کنار گذاشته شد."
+msgstr ""
+
+#: includes/class-operations.php:197
+msgid "این کالا در مبنای انتخابی وجود ندارد."
+msgstr ""
+
+#: includes/class-operations.php:233
+msgid "قیمت پایه خالی است؛ ابتدا قیمت این کالا را تعیین کنید."
+msgstr ""
+
+#: includes/class-operations.php:251
+msgid "ثبت ردیف پیش‌نمایش انجام نشد؛ دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-operations.php:266
+msgid "قیمت ویژه باید مثبت و کمتر از قیمت عادی باشد."
+msgstr ""
+
+#: includes/class-operations.php:329
+#: includes/class-operations.php:566
+#: includes/class-reports.php:75
+#: includes/class-reports.php:115
+msgid "عملیات پیدا نشد."
+msgstr ""
+
+#: includes/class-operations.php:335
+msgid "پیش‌نمایش منقضی شده یا واحد پول تغییر کرده است. دوباره پیش‌نمایش بگیرید."
+msgstr ""
+
+#: includes/class-operations.php:342
+msgid "انتخاب مدیر برای کنارگذاشتن از این عملیات."
+msgstr ""
+
+#: includes/class-operations.php:415
+msgid "محصول پس از پیش‌نمایش تغییر کرده است."
+msgstr ""
+
+#: includes/class-operations.php:491
+msgid "ابتدا عملیات را متوقف کنید."
+msgstr ""
+
+#: includes/class-operations.php:529
+msgid "فیلدهای دارای تغییر جدید حفظ شدند."
+msgstr ""
+
+#: includes/class-operations.php:573
+#: includes/class-reports.php:90
+msgid "محصول حذف‌شده"
+msgstr ""
+
+#: includes/class-policy.php:68
+msgid "کنترل سراسری فروشگاه"
+msgstr ""
+
+#: includes/class-policy.php:77
+msgid "قیمت تأیید نشده یا اعتبار آن پایان یافته است."
+msgstr ""
+
+#: includes/class-policy.php:84
+msgid "به‌روزرسانی قیمت در حال اجراست."
+msgstr ""
+
+#: includes/class-policy.php:218
+msgid "برای این کالا ابتدا استعلام ثبت کنید."
+msgstr ""
+
+#: includes/class-policy.php:226
+msgid "این کالا در حال حاضر قابل خرید نیست. استعلام ثبت کنید."
+msgstr ""
+
+#: includes/class-policy.php:248
+msgid "یک محصول سبد خرید دیگر در دسترس نیست."
+msgstr ""
+
+#: includes/class-policy.php:257
+msgid "خرید نیازمند استعلام است."
+msgstr ""
+
+#: includes/class-policy.php:259
+msgid "قیمت سبد تغییر کرده است. سبد را بررسی و قیمت‌های جدید را تأیید کنید."
+msgstr ""
+
+#: includes/class-policy.php:341
+msgid "محصول سفارش در دسترس نیست."
+msgstr ""
+
+#: includes/class-policy.php:347
+msgid "اعتبار پیشنهاد پایان یافته است. استعلام جدید لازم است."
+msgstr ""
+
+#: includes/class-policy.php:350
+msgid "قیمت این سفارش باید دوباره تأیید شود."
+msgstr ""
+
+#: includes/class-policy.php:371
+#: includes/class-quotes.php:588
+msgid "فهرست استعلام"
+msgstr ""
+
+#: includes/class-policy.php:377
+msgid "افزودن به فهرست استعلام"
+msgstr ""
+
+#: includes/class-policy.php:408
+msgid "انتخاب مدل و استعلام"
+msgstr ""
+
+#: includes/class-policy.php:452
+msgid "وضعیت و قیمت سبد را بررسی کنید."
+msgstr ""
+
+#: includes/class-policy.php:452
+msgid "تأیید قیمت‌های جدید سبد"
+msgstr ""
+
+#: includes/class-policy.php:468
+#: includes/class-support.php:19
+msgid "استعلام قیمت و موجودی"
+msgstr ""
+
+#: includes/class-policy.php:472
+msgid "در این مرحله پرداخت و رزرو موجودی انجام نمی‌شود."
+msgstr ""
+
+#: includes/class-policy.php:476
+msgid "نام و نام خانوادگی"
+msgstr ""
+
+#: includes/class-policy.php:480
+msgid "شماره موبایل"
+msgstr ""
+
+#: includes/class-policy.php:484
+msgid "ایمیل (اختیاری)"
+msgstr ""
+
+#: includes/class-policy.php:488
+msgid "توضیح (اختیاری)"
+msgstr ""
+
+#: includes/class-policy.php:492
+msgid "ثبت درخواست بدون پرداخت"
+msgstr ""
+
+#: includes/class-privacy.php:14
+msgid "برای پاسخ به استعلام، نام، شماره موبایل، ایمیل اختیاری و کالاهای انتخاب‌شده ذخیره می‌شود. اطلاعات به آندیا ارسال نمی‌شود. پیوند پیگیری خصوصی است. فهرست کالاهای استعلام در مرورگر شما نگهداری می‌شود. ایمیل و دریافت از تأمین‌کننده فقط با تنظیم مدیر فعال می‌شوند. درخواست‌های بسته یا منقضی‌شده پس از مدت نگهداری انتخابی حذف می‌شوند؛ درخواست‌های باز تا رسیدگی نگهداری می‌شوند. حذف اطلاعات شخصی سفارش‌ها از ابزار حریم خصوصی خود ووکامرس انجام می‌شود."
+msgstr ""
+
+#: includes/class-privacy.php:77
+msgid "اطلاعات حذف‌شده"
+msgstr ""
+
+#: includes/class-quotes.php:78
+msgid "نشست فرم منقضی شده است. صفحه را تازه کنید."
+msgstr ""
+
+#: includes/class-quotes.php:81
+msgid "درخواست بیش از اندازه بزرگ است."
+msgstr ""
+
+#: includes/class-quotes.php:97
+msgid "درخواست نامعتبر است."
+msgstr ""
+
+#: includes/class-quotes.php:104
+msgid "نام، ایمیل یا توضیح فرم معتبر نیست."
+msgstr ""
+
+#: includes/class-quotes.php:108
+msgid "از یک تا پنجاه کالا انتخاب کنید."
+msgstr ""
+
+#: includes/class-quotes.php:115
+msgid "مدل دقیق کالا را انتخاب کنید؛ کالای متوقف یا تکراری قابل استعلام نیست."
+msgstr ""
+
+#: includes/class-quotes.php:126
+msgid "شناسه درخواست معتبر نیست."
+msgstr ""
+
+#: includes/class-quotes.php:135
+msgid "این درخواست قبلاً با اطلاعات دیگری ثبت شده است."
+msgstr ""
+
+#: includes/class-quotes.php:166
+msgid "درخواست ثبت نشد؛ دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-quotes.php:179
+msgid "کمی صبر کنید و دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-quotes.php:184
+msgid "تعداد درخواست زیاد است. ده دقیقه دیگر تلاش کنید."
+msgstr ""
+
+#: includes/class-quotes.php:210
+msgid "درخواست ثبت شد. این پیوند خصوصی را برای پیگیری نگه دارید؛ فروشگاه پس از بررسی با شما تماس می‌گیرد."
+msgstr ""
+
+#: includes/class-quotes.php:219
+msgid "این استعلام هم‌زمان در حال تغییر است."
+msgstr ""
+
+#: includes/class-quotes.php:224
+msgid "استعلام بسته شده یا تأیید قیمت و موجودی انجام نشده است."
+msgstr ""
+
+#: includes/class-quotes.php:231
+msgid "موجودی یا امکان فروش یکی از کالاها کافی نیست."
+msgstr ""
+
+#: includes/class-quotes.php:272
+msgid "پیشنهاد قیمت آماده است"
+msgstr ""
+
+#: includes/class-quotes.php:272
+msgid "استعلام جدید ثبت شد"
+msgstr ""
+
+#: includes/class-quotes.php:273
+msgid "شماره پیگیری:"
+msgstr ""
+
+#: includes/class-quotes.php:293
+msgid "پیشنهاد قیمت منقضی، تغییرکرده یا قبلاً به سفارش تبدیل شده است."
+msgstr ""
+
+#: includes/class-quotes.php:297
+msgid "واحد پول فروشگاه تغییر کرده است؛ پیشنهاد جدید لازم است."
+msgstr ""
+
+#: includes/class-quotes.php:307
+msgid "محتوای سبد با پیشنهاد معتبر مطابقت ندارد."
+msgstr ""
+
+#: includes/class-quotes.php:352
+msgid "تعداد پیشنهاد ثابت است. برای تعداد دیگر استعلام جدید ثبت کنید."
+msgstr ""
+
+#: includes/class-quotes.php:364
+msgid "این پیشنهاد دیگر قابل پذیرش نیست."
+msgstr ""
+
+#: includes/class-quotes.php:371
+msgid "واحد پول تغییر کرده است."
+msgstr ""
+
+#: includes/class-quotes.php:375
+msgid "پیشنهاد قبلی سبد را تکمیل یا حذف کنید، سپس پیشنهاد جدید را بپذیرید."
+msgstr ""
+
+#: includes/class-quotes.php:383
+msgid "فروش یکی از کالاها متوقف شده است."
+msgstr ""
+
+#: includes/class-quotes.php:410
+msgid "موجودی کافی نیست یا افزودن کالا انجام نشد."
+msgstr ""
+
+#: includes/class-quotes.php:452
+msgid "هر سفارش باید شامل یک پیشنهاد استعلام باشد."
+msgstr ""
+
+#: includes/class-quotes.php:459
+msgid "استعلام هم‌زمان در حال پردازش است؛ دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-quotes.php:474
+msgid "این پیشنهاد قبلاً استفاده شده یا اعتبار آن پایان یافته است."
+msgstr ""
+
+#: includes/class-quotes.php:480
+msgid "تبدیل پیشنهاد به سفارش انجام نشد."
+msgstr ""
+
+#: includes/class-quotes.php:530
+msgid "پیوند پیگیری معتبر نیست."
+msgstr ""
+
+#: includes/class-quotes.php:537
+msgid "فرم منقضی شده است."
+msgstr ""
+
+#: includes/class-quotes.php:546
+msgid "پیگیری استعلام"
+msgstr ""
+
+#: includes/class-quotes.php:553
+msgid "درخواست در صف بررسی فروشگاه است. پس از بررسی با شما تماس می‌گیریم."
+msgstr ""
+
+#: includes/class-quotes.php:555
+msgid "اعتبار پیشنهاد:"
+msgstr ""
+
+#: includes/class-quotes.php:562
+msgid "قیمت هر واحد طبق تنظیم مالیات فروشگاه است. مالیات و هزینه ارسال نهایی در پرداخت ووکامرس مشخص می‌شود؛ موجودی هنوز رزرو نشده است."
+msgstr ""
+
+#: includes/class-quotes.php:564
+msgid "پذیرش پیشنهاد و ادامه به پرداخت"
+msgstr ""
+
+#: includes/class-quotes.php:566
+msgid "پیشنهاد قابل پذیرش نیست یا قبلاً به سفارش تبدیل شده است."
+msgstr ""
+
+#: includes/class-quotes.php:579
+msgid "استعلام‌های من"
+msgstr ""
+
+#: includes/class-quotes.php:588
+msgid "استعلام کالاهای فهرست"
+msgstr ""
+
+#: includes/class-reports.php:110
+msgid "اجازه دریافت گزارش قیمت را ندارید."
+msgstr ""
+
+#: includes/class-reports.php:119
+msgid "گزارش قابل دریافت نیست. دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-sources.php:23
+#: includes/class-sources.php:82
+msgid "حداکثر حجم فایل پنج مگابایت است."
+msgstr ""
+
+#: includes/class-sources.php:27
+msgid "فایل خوانده نشد."
+msgstr ""
+
+#: includes/class-sources.php:42
+msgid "فایل بیش از حد ردیف یا ستون دارد."
+msgstr ""
+
+#: includes/class-sources.php:62
+msgid "ساختار فایل اکسل مجاز نیست."
+msgstr ""
+
+#: includes/class-sources.php:68
+msgid "فایل اکسل خراب است."
+msgstr ""
+
+#: includes/class-sources.php:79
+msgid "خواندن XLSX به افزونه‌های ZIP و DOM در PHP نیاز دارد. از CSV استفاده کنید."
+msgstr ""
+
+#: includes/class-sources.php:86
+msgid "فایل اکسل باز نشد."
+msgstr ""
+
+#: includes/class-sources.php:91
+msgid "فایل اکسل بیش از حد پیچیده است."
+msgstr ""
+
+#: includes/class-sources.php:97
+msgid "فایل دارای ماکرو، لینک خارجی یا فشردگی غیرمجاز است."
+msgstr ""
+
+#: includes/class-sources.php:110
+msgid "برگه اول فایل اکسل پیدا نشد."
+msgstr ""
+
+#: includes/class-sources.php:114
+msgid "فرمول اکسل مجاز نیست. مقدار نهایی را به صورت متن یا عدد ذخیره کنید."
+msgstr ""
+
+#: includes/class-sources.php:119
+msgid "تعداد ردیف‌های اکسل بیش از حد مجاز است."
+msgstr ""
+
+#: includes/class-sources.php:129
+msgid "تعداد ستون‌های فایل زیاد است."
+msgstr ""
+
+#: includes/class-sources.php:140
+msgid "فایل اکسل دارای خطای سلول است."
+msgstr ""
+
+#: includes/class-sources.php:162
+msgid "نام ستون تکراری است."
+msgstr ""
+
+#: includes/class-sources.php:168
+msgid "ستون SKU و قیمت عادی را درست نگاشت کنید."
+msgstr ""
+
+#: includes/class-sources.php:187
+msgid "فهرست داده خالی یا بیش از حد بزرگ است."
+msgstr ""
+
+#: includes/class-sources.php:196
+msgid "SKU خالی یا تکراری است."
+msgstr ""
+
+#: includes/class-sources.php:202
+msgid "SKU به یک کالای ساده یا تنوع منتشرشده تعلق ندارد."
+msgstr ""
+
+#: includes/class-sources.php:238
+msgid "هیچ کالای منطبق و دارای قیمت پیدا نشد."
+msgstr ""
+
+#: includes/class-sources.php:249
+msgid "اتصال به منبع را تأیید و یک نشانی عمومی HTTPS بدون رمز یا کلید در URL وارد کنید."
+msgstr ""
+
+#: includes/class-sources.php:253
+msgid "واحد پول منبع معتبر نیست."
+msgstr ""
+
+#: includes/class-sources.php:264
+msgid "نام منبع لازم است."
+msgstr ""
+
+#: includes/class-sources.php:283
+msgid "این منبع در حال بررسی است."
+msgstr ""
+
+#: includes/class-sources.php:288
+msgid "منبع فعال نیست."
+msgstr ""
+
+#: includes/class-sources.php:293
+msgid "نشانی منبع دیگر عمومی و مجاز نیست."
+msgstr ""
+
+#: includes/class-sources.php:311
+msgid "دریافت معتبر از منبع انجام نشد؛ قیمت و موجودی قبلی حفظ شدند."
+msgstr ""
+
+#: includes/class-sources.php:316
+msgid "قالب، واحد پول یا زمان داده منبع قابل قبول نیست."
+msgstr ""
+
+#: includes/class-storage.php:43
+msgid "در شبکهٔ چندسایتی، افزونه را برای هر فروشگاه جدا فعال کنید."
+msgstr ""
+
+#: includes/class-support.php:20
+msgid "قیمت این کالا نیاز به تأیید دارد. درخواست شما بدون پرداخت ثبت می‌شود."
+msgstr ""
+
+#: includes/class-support.php:21
+msgid "فروش این کالا موقتاً متوقف شده است."
+msgstr ""
+
+#: includes/class-support.php:31
+#: includes/class-support.php:39
+msgid "عدد واردشده معتبر نیست."
+msgstr ""
+
+#: includes/class-support.php:47
+msgid "تعداد باید عدد صحیح باشد."
+msgstr ""
+
+#: includes/class-support.php:65
+msgid "شماره موبایل ایران را درست وارد کنید."
+msgstr ""
+
+#: includes/class-support.php:81
+msgid "تبدیل این دو واحد پول پشتیبانی نمی‌شود."
+msgstr ""
+
+#: assets/admin-product-search.js:10
+msgid "پیشنهاد نام محصول برای فیلتر"
+msgstr ""
+
+#: assets/admin-product-search.js:17
+msgid "عبارت نام انتخاب شد؛ تمام محصولات منطبق را در پیش‌نمایش بررسی کنید."
+msgstr ""
+
+#: assets/admin-product-search.js:20
+msgid "در حال جست‌وجوی نام محصولات…"
+msgstr ""
+
+#: assets/admin-product-search.js:26
+msgid "این فیلتر، تمام محصولات منطبق با عبارت نام را شامل می‌شود؛ تعداد نهایی را در پیش‌نمایش بررسی کنید."
+msgstr ""
+
+#: assets/admin-product-search.js:26
+msgid "نام محصولی پیدا نشد. عبارت کوتاه‌تری وارد کنید."
+msgstr ""
+
+#: assets/admin-product-search.js:30
+msgid "برای پیشنهاد نام، دست‌کم دو حرف وارد کنید."
+msgstr ""
+
+#: assets/admin-workbench.js:16
+#: assets/admin.js:53
+msgid "ریال"
+msgstr ""
+
+#: assets/admin-workbench.js:23
+msgid "بدون قیمت"
+msgstr ""
+
+#: assets/admin-workbench.js:43
+msgid "دسته‌ها: "
+msgstr ""
+
+#: assets/admin-workbench.js:51
+msgid "نام کالا شامل: "
+msgstr ""
+
+#: assets/admin-workbench.js:54
+msgid "منبع: "
+msgstr ""
+
+#: assets/admin-workbench.js:56
+msgid "تمام محصولات منتشرشده و تنوع‌های آنها"
+msgstr ""
+
+#: assets/admin-workbench.js:59
+msgid "قیمت‌های بررسی‌شده از فایل یا منبع"
+msgstr ""
+
+#: assets/admin-workbench.js:61
+msgid "قیمت ثابت: "
+msgstr ""
+
+#: assets/admin-workbench.js:63
+msgid "کاهش "
+msgstr ""
+
+#: assets/admin-workbench.js:63
+msgid "افزایش "
+msgstr ""
+
+#: assets/admin-workbench.js:65
+msgid "از مبنای اولیه عملیات #"
+msgstr ""
+
+#: assets/admin-workbench.js:65
+msgid "از قیمت فعلی هر کالا"
+msgstr ""
+
+#: assets/admin-workbench.js:82
+msgid "قیمت اولیه"
+msgstr ""
+
+#: assets/admin-workbench.js:85
+msgid "بدون تغییر مبلغ"
+msgstr ""
+
+#: assets/admin-workbench.js:99
+msgid "جست‌وجوی گزینه‌ها"
+msgstr ""
+
+#: assets/admin-workbench.js:100
+msgid "جست‌وجو در "
+msgstr ""
+
+#: assets/admin-workbench.js:102
+msgid "گزینه‌ای با این نام پیدا نشد."
+msgstr ""
+
+#: assets/admin-workbench.js:103
+msgid "پاک‌کردن انتخاب‌های این فیلتر"
+msgstr ""
+
+#: assets/admin-workbench.js:117
+msgid " گزینه"
+msgstr ""
+
+#: assets/admin-workbench.js:117
+msgid "همه؛ برای محدودکردن انتخاب کنید"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "خرید"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "توقف"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "عادی"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "پیش‌نمایش"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "در حال پردازش"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "تکمیل‌شده"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "نیازمند بررسی"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "متوقف‌شده"
+msgstr ""
+
+#: assets/admin.js:12
+#: assets/admin.js:100
+msgid "اعمال‌شده"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "آماده اجرا"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "تعارض"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "ناموفق"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "کنار گذاشته"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "بازگردانی‌شده"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "تغییر جدید حفظ شد"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "جدید"
+msgstr ""
+
+#: assets/admin.js:12
+#: assets/admin.js:158
+msgid "در حال بررسی"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "پیشنهاد صادرشده"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "سفارش ایجادشده"
+msgstr ""
+
+#: assets/admin.js:12
+msgid "بسته"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "پیش‌نمایش ساخته شد"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "محصول ویرایش شد"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "تنظیمات تغییر کرد"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "منبع ذخیره شد"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "دریافت از منبع ناموفق بود"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "استعلام ثبت شد"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "پیشنهاد قیمت صادر شد"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "استعلام به سفارش تبدیل شد"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "اطلاعات شخصی درخواست حذف شد"
+msgstr ""
+
+#: assets/admin.js:13
+msgid "ارسال ایمیل ناموفق بود"
+msgstr ""
+
+#: assets/admin.js:14
+#: assets/admin.js:157
+msgid "سفارش ووکامرس #"
+msgstr ""
+
+#: assets/admin.js:14
+#: assets/admin.js:17
+msgid "—"
+msgstr ""
+
+#: assets/admin.js:20
+msgid "پاسخ فروشگاه دریافت نشد. اتصال را بررسی کنید و دوباره تلاش کنید."
+msgstr ""
+
+#: assets/admin.js:20
+msgid "پاسخ فروشگاه دریافت نشد. عملیات ممکن است ثبت شده باشد؛ پیش از تکرار، گزارش یا تاریخچه را تازه کنید."
+msgstr ""
+
+#: assets/admin.js:20
+msgid "پاسخ فروشگاه قابل خواندن نیست. صفحه را تازه کنید."
+msgstr ""
+
+#: assets/admin.js:20
+msgid "عملیات انجام نشد."
+msgstr ""
+
+#: assets/admin.js:22
+msgid "در حال بررسی…"
+msgstr ""
+
+#: assets/admin.js:29
+msgid "یکی از گزینه‌های این گروه در فهرست فعلی وجود ندارد. فهرست را تازه کنید و دسته، برند و ویژگی گروه را بررسی کنید؛ دامنه قیمت‌گذاری تغییر نکرد."
+msgstr ""
+
+#: assets/admin.js:46
+msgid "مقدار درصد است، نه مبلغ پول."
+msgstr ""
+
+#: assets/admin.js:46
+msgid "مبلغ به واحد جاری فروشگاه: "
+msgstr ""
+
+#: assets/admin.js:51
+msgid "محدودکردن با برند، ویژگی و برچسب"
+msgstr ""
+
+#: assets/admin.js:59
+msgid "تغییر قیمت کالاها"
+msgstr ""
+
+#: assets/admin.js:59
+msgid "انتخاب، پیش‌نمایش و تأیید نهایی"
+msgstr ""
+
+#: assets/admin.js:59
+msgid " انتخاب ذخیره‌شده"
+msgstr ""
+
+#: assets/admin.js:59
+msgid "فایل و تأمین‌کننده"
+msgstr ""
+
+#: assets/admin.js:59
+msgid "منبع نیازمند بررسی: "
+msgstr ""
+
+#: assets/admin.js:59
+msgid "ورود فایل یا دریافت از منبع مشخص"
+msgstr ""
+
+#: assets/admin.js:60
+msgid "استعلام‌های تازه"
+msgstr ""
+
+#: assets/admin.js:61
+#: assets/admin.js:156
+msgid "باز کردن"
+msgstr ""
+
+#: assets/admin.js:62
+#: assets/admin.js:154
+msgid "حالت فروش: "
+msgstr ""
+
+#: assets/admin.js:62
+msgid "بررسی کنترل فروش"
+msgstr ""
+
+#: assets/admin.js:63
+#: assets/admin.js:166
+msgid "عملیات"
+msgstr ""
+
+#: assets/admin.js:63
+#: assets/admin.js:156
+#: assets/admin.js:166
+msgid "زمان"
+msgstr ""
+
+#: assets/admin.js:63
+#: assets/admin.js:136
+#: assets/admin.js:151
+msgid "کارها"
+msgstr ""
+
+#: assets/admin.js:63
+msgid "بررسی و ادامه"
+msgstr ""
+
+#: assets/admin.js:63
+msgid "باز کردن گزارش"
+msgstr ""
+
+#: assets/admin.js:64
+msgid "WP-Cron فعال است."
+msgstr ""
+
+#: assets/admin.js:64
+msgid "WP-Cron غیرفعال است؛ زمان‌بندی به cron واقعی هاست نیاز دارد."
+msgstr ""
+
+#: assets/admin.js:64
+msgid "صف پس‌زمینه ووکامرس در دسترس است."
+msgstr ""
+
+#: assets/admin.js:64
+msgid "صف جایگزین WP-Cron استفاده می‌شود."
+msgstr ""
+
+#: assets/admin.js:65
+msgid "آخرین بازگردانی: "
+msgstr ""
+
+#: assets/admin.js:65
+#: assets/admin.js:155
+msgid "فیلد بازگردانی‌شده: "
+msgstr ""
+
+#: assets/admin.js:65
+#: assets/admin.js:102
+msgid "تغییر جدید حفظ‌شده: "
+msgstr ""
+
+#: assets/admin.js:65
+msgid "کالای باقی‌مانده: "
+msgstr ""
+
+#: assets/admin.js:71
+msgid "ویرایش گروه قیمت‌گذاری: "
+msgstr ""
+
+#: assets/admin.js:71
+msgid "ذخیره تغییرهای همین گروه"
+msgstr ""
+
+#: assets/admin.js:74
+msgid "اولین گروه قیمت‌گذاری را بسازید"
+msgstr ""
+
+#: assets/admin.js:74
+msgid "اگر یک ترکیب دسته و برند را تکرار می‌کنید، آن را یک‌بار ذخیره کنید. برای تغییر قیمت یک دسته، انتخاب مستقیم همان دسته کافی است."
+msgstr ""
+
+#: assets/admin.js:76
+msgid "استفاده برای قیمت‌گذاری"
+msgstr ""
+
+#: assets/admin.js:76
+#: assets/admin.js:151
+msgid "ویرایش"
+msgstr ""
+
+#: assets/admin.js:77
+msgid "این انتخاب ذخیره‌شده حذف شود؟ محصولات، قیمت‌ها و دسته‌بندی فروشگاه حفظ می‌شوند."
+msgstr ""
+
+#: assets/admin.js:77
+msgid "بله، حذف همین گروه"
+msgstr ""
+
+#: assets/admin.js:77
+msgid "گروه قیمت‌گذاری حذف شد."
+msgstr ""
+
+#: assets/admin.js:77
+msgid "انصراف"
+msgstr ""
+
+#: assets/admin.js:78
+msgid "حذف گروه"
+msgstr ""
+
+#: assets/admin.js:86
+msgid "پیش‌نمایش آماده است. قیمت‌ها هنوز تغییر نکرده‌اند؛ تعداد و مبلغ‌ها را بررسی کنید."
+msgstr ""
+
+#: assets/admin.js:92
+msgid "بررسی و تأیید نهایی "
+msgstr ""
+
+#: assets/admin.js:92
+msgid " کالا / تنوع"
+msgstr ""
+
+#: assets/admin.js:94
+msgid "واحد پول فروشگاه تغییر کرده است؛ دوباره پیش‌نمایش بگیرید."
+msgstr ""
+
+#: assets/admin.js:94
+msgid "اعتبار پیش‌نمایش تمام شده است؛ دوباره پیش‌نمایش بگیرید."
+msgstr ""
+
+#: assets/admin.js:94
+msgid "انتخاب یا روش تغییر کرده است؛ دوباره پیش‌نمایش بگیرید."
+msgstr ""
+
+#: assets/admin.js:94
+msgid "آماده تأیید: "
+msgstr ""
+
+#: assets/admin.js:94
+msgid "کنارگذاشته توسط شما در همه صفحات: "
+msgstr ""
+
+#: assets/admin.js:98
+#: assets/admin.js:162
+msgid "عملیات #"
+msgstr ""
+
+#: assets/admin.js:98
+msgid "واحد ثبت‌شده: "
+msgstr ""
+
+#: assets/admin.js:99
+msgid "دامنه: ردیف‌های همین فایل یا دریافت تأمین‌کننده"
+msgstr ""
+
+#: assets/admin.js:100
+msgid "کل کالا و تنوع"
+msgstr ""
+
+#: assets/admin.js:100
+msgid "آماده / انتخاب‌شده"
+msgstr ""
+
+#: assets/admin.js:100
+msgid "کنارگذاشته"
+msgstr ""
+
+#: assets/admin.js:100
+msgid "ناموفق / تعارض"
+msgstr ""
+
+#: assets/admin.js:101
+msgid "اعتبار این پیش‌نمایش تا: "
+msgstr ""
+
+#: assets/admin.js:101
+msgid "تغییر قیمت یا واحد پول نیازمند بررسی دوباره است."
+msgstr ""
+
+#: assets/admin.js:102
+msgid "بازگردانی‌شده: "
+msgstr ""
+
+#: assets/admin.js:103
+msgid "ردیف بررسی‌شده: "
+msgstr ""
+
+#: assets/admin.js:107
+#: assets/admin.js:125
+msgid "مبنای اولیه عملیات #"
+msgstr ""
+
+#: assets/admin.js:108
+msgid "پیش‌نمایش؛ قیمت‌ها هنوز تغییر نکرده‌اند"
+msgstr ""
+
+#: assets/admin.js:108
+msgid "گزارش نتیجه عملیات"
+msgstr ""
+
+#: assets/admin.js:110
+msgid "انتخاب "
+msgstr ""
+
+#: assets/admin.js:110
+msgid "بدون SKU"
+msgstr ""
+
+#: assets/admin.js:111
+msgid "کالایی در این دامنه پیدا نشد. فیلترها را بررسی کنید."
+msgstr ""
+
+#: assets/admin.js:112
+#: assets/admin.js:137
+#: assets/admin.js:156
+#: assets/admin.js:167
+msgid "صفحه "
+msgstr ""
+
+#: assets/admin.js:117
+msgid "پردازش تمام شد؛ تعداد اعمال‌شده و موارد نیازمند بررسی در گزارش مشخص‌اند."
+msgstr ""
+
+#: assets/admin.js:118
+msgid "فقط ردیف‌های همین فایل یا دریافت تأمین‌کننده"
+msgstr ""
+
+#: assets/admin.js:118
+msgid "تغییر روی "
+msgstr ""
+
+#: assets/admin.js:118
+msgid " کالا / تنوع انتخاب‌شده"
+msgstr ""
+
+#: assets/admin.js:118
+msgid "کنارگذاشته توسط شما: "
+msgstr ""
+
+#: assets/admin.js:118
+msgid "کنارگذاشته در اعتبارسنجی: "
+msgstr ""
+
+#: assets/admin.js:118
+msgid "واحد مبلغ‌ها: "
+msgstr ""
+
+#: assets/admin.js:119
+msgid "تأیید نهایی لازم است؛ انتخاب یا روش تازه به پیش‌نمایش دوباره نیاز دارد."
+msgstr ""
+
+#: assets/admin.js:123
+msgid "پردازش آینده متوقف شد. تغییرهای انجام‌شده در گزارش مشخص‌اند."
+msgstr ""
+
+#: assets/admin.js:124
+msgid "بعضی کالاها در حال پردازش‌اند. بازگردانی هنوز کامل نیست؛ کمی بعد دوباره دکمه بازگردانی را بزنید."
+msgstr ""
+
+#: assets/admin.js:124
+msgid "بازگردانی انجام شد؛ فیلدهای دارای تغییر جدید حفظ شده‌اند."
+msgstr ""
+
+#: assets/admin.js:125
+msgid "روش و مقدار را اصلاح کنید، سپس دوباره پیش‌نمایش بگیرید."
+msgstr ""
+
+#: assets/admin.js:126
+msgid "گروه قیمت‌گذاری ذخیره شد."
+msgstr ""
+
+#: assets/admin.js:132
+msgid "در حال جست‌وجوی محصولات…"
+msgstr ""
+
+#: assets/admin.js:136
+#: assets/admin.js:147
+msgid "قیمت"
+msgstr ""
+
+#: assets/admin.js:136
+msgid "فروش / موجودی"
+msgstr ""
+
+#: assets/admin.js:136
+msgid "قیمت مستقل تنوع‌ها"
+msgstr ""
+
+#: assets/admin.js:136
+msgid "موجود"
+msgstr ""
+
+#: assets/admin.js:136
+msgid "ناموجود"
+msgstr ""
+
+#: assets/admin.js:136
+msgid "پیش‌فروش"
+msgstr ""
+
+#: assets/admin.js:136
+#: assets/admin.js:147
+#: assets/admin.js:156
+msgid "بررسی"
+msgstr ""
+
+#: assets/admin.js:136
+msgid "محصولی پیدا نشد. نام یا SKU را بررسی کنید."
+msgstr ""
+
+#: assets/admin.js:137
+msgid " نتیجه؛ جست‌وجو هنگام تایپ انجام می‌شود."
+msgstr ""
+
+#: assets/admin.js:138
+msgid "جست‌وجو انجام نشد. دوباره جست‌وجو کنید."
+msgstr ""
+
+#: assets/admin.js:147
+msgid "تنوع‌های این کالا"
+msgstr ""
+
+#: assets/admin.js:147
+msgid "مدل"
+msgstr ""
+
+#: assets/admin.js:147
+msgid "ویرایش تنوع"
+msgstr ""
+
+#: assets/admin.js:149
+msgid "محصول ذخیره شد."
+msgstr ""
+
+#: assets/admin.js:150
+msgid "فایل بررسی شد. پیش‌نمایش را تأیید کنید."
+msgstr ""
+
+#: assets/admin.js:151
+msgid "وضعیت و بررسی موفق"
+msgstr ""
+
+#: assets/admin.js:151
+msgid "دریافت و پیش‌نمایش"
+msgstr ""
+
+#: assets/admin.js:151
+msgid "حذف منبع"
+msgstr ""
+
+#: assets/admin.js:151
+msgid "خودکار"
+msgstr ""
+
+#: assets/admin.js:151
+msgid "دستی"
+msgstr ""
+
+#: assets/admin.js:152
+msgid "منبع ذخیره شد."
+msgstr ""
+
+#: assets/admin.js:154
+msgid "دامنه: "
+msgstr ""
+
+#: assets/admin.js:154
+msgid "دسته انتخابی: "
+msgstr ""
+
+#: assets/admin.js:154
+msgid "تمام فروشگاه"
+msgstr ""
+
+#: assets/admin.js:154
+msgid "اعتبار قیمت (ساعت): "
+msgstr ""
+
+#: assets/admin.js:154
+msgid "غیرفعال‌سازی: "
+msgstr ""
+
+#: assets/admin.js:154
+msgid "بازگردانی تغییرهای افزونه"
+msgstr ""
+
+#: assets/admin.js:154
+msgid "نگهداری قیمت‌ها"
+msgstr ""
+
+#: assets/admin.js:154
+msgid "ایمیل مشتری: "
+msgstr ""
+
+#: assets/admin.js:154
+msgid "فعال"
+msgstr ""
+
+#: assets/admin.js:154
+msgid "غیرفعال"
+msgstr ""
+
+#: assets/admin.js:154
+msgid "پاک‌کردن داده هنگام حذف: "
+msgstr ""
+
+#: assets/admin.js:155
+msgid "تنظیمات ذخیره شد."
+msgstr ""
+
+#: assets/admin.js:155
+msgid "باقی‌مانده: "
+msgstr ""
+
+#: assets/admin.js:156
+msgid "شماره"
+msgstr ""
+
+#: assets/admin.js:156
+msgid "مشتری"
+msgstr ""
+
+#: assets/admin.js:156
+msgid "موبایل"
+msgstr ""
+
+#: assets/admin.js:157
+msgid "استعلام #"
+msgstr ""
+
+#: assets/admin.js:157
+msgid "پیوند خصوصی پیگیری"
+msgstr ""
+
+#: assets/admin.js:157
+msgid "کپی پیوند"
+msgstr ""
+
+#: assets/admin.js:157
+msgid "پیوند کپی شد."
+msgstr ""
+
+#: assets/admin.js:158
+msgid "اعتبار پیشنهاد (ساعت)"
+msgstr ""
+
+#: assets/admin.js:158
+msgid "زمان و شرایط تحویل"
+msgstr ""
+
+#: assets/admin.js:158
+msgid "توضیح پیشنهاد"
+msgstr ""
+
+#: assets/admin.js:158
+msgid "قیمت و امکان تأمین همه کالاها را بررسی کرده‌ام"
+msgstr ""
+
+#: assets/admin.js:158
+msgid "صدور پیشنهاد با این قیمت‌ها"
+msgstr ""
+
+#: assets/admin.js:158
+msgid "پیشنهاد ثبت شد. پیوند خصوصی را برای مشتری بفرستید."
+msgstr ""
+
+#: assets/admin.js:158
+msgid "بستن استعلام"
+msgstr ""
+
+#: assets/admin.js:158
+msgid "حذف اطلاعات شخصی پس از احراز هویت مشتری"
+msgstr ""
+
+#: assets/admin.js:158
+msgid "نام، شماره، ایمیل و یادداشت حذف و پیوند قبلی باطل می‌شود. سفارش ووکامرس حذف نمی‌شود."
+msgstr ""
+
+#: assets/admin.js:158
+msgid "حذف اطلاعات شخصی این درخواست"
+msgstr ""
+
+#: assets/admin.js:158
+msgid "اطلاعات شخصی درخواست حذف شد."
+msgstr ""
+
+#: assets/admin.js:162
+msgid "اعمال‌شده: "
+msgstr ""
+
+#: assets/admin.js:162
+msgid "کنارگذاشته: "
+msgstr ""
+
+#: assets/admin.js:162
+msgid "ناموفق / تعارض: "
+msgstr ""
+
+#: assets/admin.js:162
+#: assets/front.js:16
+msgid "کالا"
+msgstr ""
+
+#: assets/admin.js:163
+msgid "صفحه قبلی گزارش"
+msgstr ""
+
+#: assets/admin.js:163
+msgid "صفحه بعدی گزارش"
+msgstr ""
+
+#: assets/admin.js:166
+msgid "گزارش"
+msgstr ""
+
+#: assets/admin.js:166
+msgid "مشاهده"
+msgstr ""
+
+#: assets/admin.js:166
+msgid "رویدادهای ثبت‌شده"
+msgstr ""
+
+#: assets/admin.js:166
+msgid "رویداد"
+msgstr ""
+
+#: assets/admin.js:166
+msgid "مرجع"
+msgstr ""
+
+#: assets/admin.js:166
+msgid "جزئیات"
+msgstr ""
+
+#: assets/admin.js:166
+msgid "رویداد افزونه"
+msgstr ""
+
+#: assets/admin.js:169
+msgid "گروه قیمت‌گذاری ذخیره شد"
+msgstr ""
+
+#: assets/admin.js:169
+msgid "گروه قیمت‌گذاری حذف شد"
+msgstr ""
+
+#: assets/front.js:11
+msgid "ثبت درخواست انجام نشد."
+msgstr ""
+
+#: assets/front.js:13
+msgid "هنوز کالایی به فهرست اضافه نکرده‌اید."
+msgstr ""
+
+#: assets/front.js:13
+msgid "تعداد"
+msgstr ""
+
+#: assets/front.js:13
+msgid "تعداد "
+msgstr ""
+
+#: assets/front.js:13
+msgid "تعداد باید از ۱ تا ۹۹۹ باشد."
+msgstr ""
+
+#: assets/front.js:13
+msgid "حذف"
+msgstr ""
+
+#: assets/front.js:16
+msgid "به فهرست اضافه شد"
+msgstr ""
+
+#: assets/front.js:18
+msgid "در حال ثبت درخواست…"
+msgstr ""
+
+#: assets/front.js:18
+msgid "شماره پیگیری: "
+msgstr ""
+
+#: assets/front.js:18
+msgid "مشاهده و نگه‌داشتن پیوند پیگیری"
+msgstr ""
+
+#: assets/front.js:19
+msgid "فروش این مدل موقتاً متوقف شده است."
+msgstr ""
+
+#: assets/front.js:19
+msgid "برای این مدل استعلام قیمت و موجودی ثبت کنید."
+msgstr ""
