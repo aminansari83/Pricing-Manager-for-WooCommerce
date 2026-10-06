@@ -1,0 +1,100 @@
+Pricing Manager for WooCommerce — Developer notes — 0.2.0
+GPL-2.0-or-later. This is the useful Free core; no license key or required account.
+
+MODULES
+Support: currency, normalization, snapshots, product locks and cache invalidation.
+Storage: seven prefixed per-site tables, schema, baseline ownership, restoration and audit.
+Operations: frozen previews, 50-row processing, exclusions, optimistic product versions, cancellation and guarded undo.
+Policy: buy/quote/stop precedence, server validity, product display, structured data, classic/Store API cart, checkout and order-pay guards.
+Quotes: short intake, signed private links, offer versions, native cart pricing and atomic single-order binding. Purchase authorization is per object/request in a WeakMap, never persistent product permission.
+Sources: bounded CSV/XLSX and explicit consented HTTPS JSON import. The first worksheet uses values, not formulas. Automatic writes require explicit source ownership. Currency must be explicit; unexpected/stale data does not extend validity.
+Reports: private streaming CSV, captured units, per-operation nonce, capability checks, 200-row cursor chunks and formula-safe text.
+Admin: protected WooCommerce submenu, product editor tab and management REST API.
+Privacy: exporter/eraser, verified merchant anonymization, scheduled retention.
+
+DATA OWNERSHIP
+Products, regular/sale prices and lookup data are saved through WC_Product CRUD. Inventory and order totals are never changed by price operations or plugin deactivation. Quote orders use WC_Order/WC_Order_Item CRUD and support legacy storage and HPOS. Normal Woo checkout controls shipping, tax, gateways and stock reservations/reductions.
+Tables: <WP prefix>apg_batches, apg_rows, apg_baselines, apg_quotes, apg_groups, apg_sources, apg_audit.
+Product meta: _apg_state, _apg_exclude, _apg_checked, _apg_expires, _apg_source.
+Order/item meta: _apg_quote, _apg_version, _apg_seen, _apg_payment_started.
+Settings: apg_settings; schema/version: apg_schema; lifecycle: apg_running, apg_deactivation_report.
+Timestamps are UTC Unix seconds; formatting uses the WordPress site timezone. The admin JS formats dates with fa-IR where Intl is available.
+Do not write product prices directly in postmeta. Do not treat view-context hidden prices as stored zero prices. Read native edit-context fields to calculate. Do not grant public access to the private tables.
+
+DEFAULT DEACTIVATION
+Each written field has its initial value and latest expected value. Only fields still equal to expected are restored. A later manual edit is preserved; different regular/sale fields are checked separately and invalid pairs are retained for review. Stock and orders are not rollback targets. A currently locked product is left recorded for the next activation's restoration action. Restricted-host execution time can require a smaller pilot.
+Changing the setting to keep retains current prices and releases baseline ownership. Uninstall is separately opt-in; it deletes only plugin data, not core products/orders/prices/stock. Multisite is individual-site activation; network activation is intentionally rejected.
+
+MANAGEMENT REST API
+Base: /wp-json/andiya-price-guard/v1/admin/
+Use WordPress authentication. Cookie requests need a current X-WP-Nonce from wp_create_nonce('wp_rest'); server integrations may use WordPress application passwords over HTTPS. Never put credentials in URLs. The core permission callbacks enforce capabilities regardless of the UI.
+Capabilities: apg_manage_prices, apg_manage_quotes, apg_view_history. Default administrator/shop_manager receive all three; a custom role may receive selected capabilities.
+GET bootstrap: version/server time/currency/timezone, last five capability-gated operation summaries, category parents, settings, groups, sources and health; no quote PII for a prices-only role.
+GET products: page (20 per page), search (name or exact SKU).
+GET product/<id>: product snapshot, fingerprint and child variations.
+POST product/<id>: fingerprint required; prices, state, source, exclude, confirmed, hours. A stale fingerprint is a conflict.
+POST preview: kind percent/fixed/set/state/confirm, value, filters, hours, sale, round, round_mode, base_id. Percent revisions from a base_id use that frozen original, not compounded current prices.
+GET batch/<id>: frozen rows, counts and statuses.
+POST batch/<id>/apply: exclude array of product IDs from this preview.
+POST batch/<id>/step: process a bounded chunk.
+POST batch/<id>/cancel: stop future rows; already-written rows remain until undo.
+POST batch/<id>/undo: restore still-owned values; preserve newer edits.
+GET/POST/DELETE groups: id, name, filters and optional revision. GET returns a SHA-256 revision of the stored name/filters. Supplied stale revisions reject updates/deletions under a group lock. Legacy omission remains supported; DELETE query parameters remain compatible. The UI always supplies revisions.
+POST settings: normal/quote/stop mode, categories, validity, notifications, retention, deactivation restore/keep and explicit uninstall deletion setting.
+GET quotes: page, 30 rows; quote capability only.
+GET quote/<id>: private detail and tracking URL; no raw secret is returned.
+POST quote/<id>: action offer (confirmed, prices keyed by exact product/variation ID, hours, delivery, note), erase after verification, or status review/closed.
+GET history: page/pages, paginated native batch summary and audit.
+Operation API responses include a protected export_url. GET /wp-admin/admin-post.php?action=apg_export_batch&batch_id=<id>&_wpnonce=<operation nonce> streams all report rows; prices OR history capability is required. Anonymous requests have no registered public export action. Nothing is saved publicly. Before/planned fields must be interpreted with row_status; they are not claims that skipped/conflicted rows were published. SKU/product labels reflect the current native product; frozen prices/configuration and captured currency are the operation snapshot. UTF-8 BOM and an apostrophe guard spreadsheet formula-like text and zero-prefixed SKUs. CSV report columns are not import columns.
+POST import: multipart CSV/XLSX file, currency and sku_column/price_column/sale_column mapping. Always produces a preview.
+POST/DELETE sources: explicit HTTPS source config/consent. No credential is stored in tables.
+POST source/<id>/fetch: fetch and preview. Automatic scheduling writes only products assigned to source:<id>.
+POST restore: finish restoration remaining from deactivation.
+
+Filters example (category OR list; different taxonomy filters AND):
+{"categories":[12],"terms":{"product_brand":[7],"pa_gender":[9]},"source":"source:1","search":""}
+The supported brand taxonomy is native product_brand; arbitrary third-party brand taxonomies need an adapter.
+
+PUBLIC INTAKE
+GET /wp-json/andiya-price-guard/v1/nonce: uncached apg_intake nonce.
+POST /wp-json/andiya-price-guard/v1/quotes: X-APG-Nonce plus name, phone, optional email/note, items [{id,qty}], request_key, empty website honeypot.
+request_key is 16–128 alphanumeric/underscore/dash characters. Same key+phone and identical payload is idempotent; changed payload is rejected. Exact child variation ID is required. Name/mobile are required; account, address and payment are deferred to native Woo checkout.
+POST /wp-json/andiya-price-guard/v1/cart/accept-prices: X-APG-Nonce, refreshes normal cart prices after customer review. It does not extend a quote or bypass an emergency stop.
+Private tracking uses strong signed URL, no-cache/noindex/no-referrer and a separate acceptance nonce. Treat links as customer secrets; do not put them in analytics logs or third-party pixels. No stock is reserved during intake/offer.
+
+SUPPLIER JSON CONTRACT
+Merchant-provided public HTTPS URL without query credentials, private addresses or redirects. WordPress HTTP uses SSL verification, 20-second timeout and 5 MiB response bound. Source calls are not made during product display or checkout.
+{"currency":"IRT","updated_at":"2026-10-05T20:00:00Z","products":[{"sku":"001-APG","regular_price":"1200000","sale_price":"1100000"}]}
+updated_at must be within the prior 48 hours and no more than five minutes in the future. Unknown/duplicate SKU and invalid amounts reject the input; empty amounts are ignored. Store/File units IRR/IRT/IRHR/IRHT convert once. Zero after decimal rounding is rejected. Automatic outliers preserve stored price and set quote state.
+Optional Bearer key is defined in wp-config.php as APG_SOURCE_TOKEN_1 for source ID 1. It is sent only to the configured supplier URL; no customer or quote payload is sent.
+Hourly WP-Cron selects up to five due sources. Source hours currently governs both the minimum fetch interval and imported price validity. Errors are visible in source health. Set a real host cron for dependable updates; validity still expires on the server without cron.
+
+EXTENSION POINTS
+andiya_pg_catalog_changed(array $product_ids): fires after a catalog/cache change. The array may be empty for a scope/settings/global cache change. It may fire per chunk; debounce expensive adapters. Add custom CDN invalidation here.
+andiya_pg_event(string $event,int $object_id,array $details): audit notification; actor/time are recorded by Storage. Do not attach customer PII or remote telemetry without explicit consent.
+Events currently include preview_created, completed, partial, cancelled, undone, product_changed, settings_changed, source_saved, source_failed, quote_created, quote_offered, quote_order, quote_anonymized and email_failed.
+A Pro/API/ERP add-on should be a separate optional namespaced plugin. Read native data and use the protected core API/workflows. Preserve core permissions, explicit units, optimistic versions, idempotency, server expiry and single-use quote binding. Do not expose a public price-write route or scrape a live exchange rate as a substitute for replacement cost.
+SMS/CRM/ERP/Torob integrations and licensing are not implemented. The Free core must remain useful without them. Any future Andiya contact/marketing/lead flow requires clear opt-in and a documented privacy policy; no automatic enrollment exists.
+
+TESTING AND PUBLICATION
+See TEST-REPORT.txt for executed coverage and honest gaps. Tests are not part of the install ZIP. Source checkpoint includes tests guarded for a disposable WordPress local environment; never run destructive fixtures against a real store. WordPress.org Plugin Check is a useful static gate, not a security certification or automatic acceptance. Confirm directory slug and contributor ownership before an actual submission.
+
+Official references checked 2026-10-05 UTC / 2026-10-06 Asia/Tehran:
+https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/
+https://developer.wordpress.org/apis/security/escaping/
+https://developer.woocommerce.com/docs/features/orders/high-performance-order-storage/recipe-book/
+https://developer.woocommerce.com/2023/11/06/faq-extending-cart-and-checkout-blocks/
+
+APPROVED NAME AND COMPATIBILITY
+Display names are Pricing Manager for WooCommerce / مدیریت قیمت ووکامرس. Existing andiya-price-guard folder, text domain, APG constants, REST/table/action identifiers are retained for actual in-place upgrades. Future add-ons may extend the documented capabilities/hooks without bypassing native version, stock, quote or ownership guards. No Pro license, vendor account or default lead collection is introduced.
+
+WORKBENCH CONTRACT
+Checkbox pickers update canonical native selects, preserving filter serialization. Final review is a separate form; dirty filters, currency changes or expiry invalidate approval. Resumption calls bounded step, never a second apply. Hidden group/source IDs are explicitly cleared on reset because setting hidden input.value also changes its native default. Using a saved group with a missing listed choice fails without broadening the scope. Term selectors are currently capped at 1000 each, saved groups at 200, sources at 100; operation scope is capped at 20,000 rows.
+
+PRODUCT SEARCH
+GET admin/products requires apg_manage_prices and the ordinary WordPress REST nonce. Live table lookup debounces 350 ms, cancels previous requests and rejects out-of-order responses with epochs. Exact SKUs retain the actual product/variation ID. Partial name/SKU searches use the native WooCommerce product data store, with a published-product WP_Query and 20 rows per page; empty ID results explicitly use post__in=[0] because an empty array would select all posts. A literal SKU "0" is a search term. Inputs are limited to 180 characters client-side / 720 bytes server-side.
+mode=names returns lightweight product name/SKU suggestions using the existing bulk/group WP_Query text-filter semantics; it does not silently reinterpret a bulk filter as a SKU or introduce product-ID selection. Accessible comboboxes support arrows, Enter, Escape, IME composition, reset and field-fill invalidation. Selecting a suggestion changes only the saved text filter. Tests reorder actual HTTP responses to validate the epoch guard even when abort is ignored. The JSDOM/Node fetch bridge uses Node AbortController; browsers use their own window API normally.
+Primary data-store reference checked 2026-10-06 UTC: https://woocommerce.github.io/code-reference/classes/WC-Product-Data-Store-CPT.html
+
+LIMITED STAFF ACCESS
+Administrators/shop managers keep the menu under WooCommerce. A deliberately custom role with only an APG capability uses the Dashboard submenu and receives only permitted screens. WooCommerce's admin-access restriction is relaxed only for admin.php?page=andiya-price-guard and only when that user already has an APG capability. The actual page hook determines enqueued assets. REST, exports and all mutations continue enforcing independent capabilities/nonces; history-only staff cannot search or change current products.
